@@ -5,21 +5,21 @@
 class Xenvsync < Formula
   desc "Encrypt, commit, and inject .env secrets — no cloud required"
   homepage "https://github.com/nasimstg/xenvsync"
-  version "1.12.0"
+  version "1.13.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nasimstg/xenvsync/releases/download/v1.12.0/xenvsync_1.12.0_darwin_amd64.tar.gz"
-      sha256 "cbe9f77c906182530858cc307d58c63d7802b42dddcb24dce8faa33f61f1f870"
+      url "https://github.com/nasimstg/xenvsync/releases/download/v1.13.0/xenvsync_1.13.0_darwin_amd64.tar.gz"
+      sha256 "546fe1356cd43e92b7cfc695b5b67b4c9964cf9ab92138b1d0c25952efbe6bd0"
 
       define_method(:install) do
         bin.install "xenvsync"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nasimstg/xenvsync/releases/download/v1.12.0/xenvsync_1.12.0_darwin_arm64.tar.gz"
-      sha256 "9d48a52ce1439d0f7b61bc19ec4a1efab0fd8f2406fd152180ad8527b5fa50dd"
+      url "https://github.com/nasimstg/xenvsync/releases/download/v1.13.0/xenvsync_1.13.0_darwin_arm64.tar.gz"
+      sha256 "370ba813a367c2400f03275cee93e8ff457faf4af98c90617441e082e6c65586"
 
       define_method(:install) do
         bin.install "xenvsync"
@@ -29,15 +29,15 @@ class Xenvsync < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nasimstg/xenvsync/releases/download/v1.12.0/xenvsync_1.12.0_linux_amd64.tar.gz"
-      sha256 "d9a124250980eda85dca27f2fe265c6696a68f94842bd79e1568b7efc915b8e3"
+      url "https://github.com/nasimstg/xenvsync/releases/download/v1.13.0/xenvsync_1.13.0_linux_amd64.tar.gz"
+      sha256 "2b983f9adc875299aada31ffa4c091901dd3c76cbded04f20c952f41d78d0b91"
       define_method(:install) do
         bin.install "xenvsync"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nasimstg/xenvsync/releases/download/v1.12.0/xenvsync_1.12.0_linux_arm64.tar.gz"
-      sha256 "d593e4583e074173af20dc44569c47dab11029fe4fdfa469ac30549990cf58da"
+      url "https://github.com/nasimstg/xenvsync/releases/download/v1.13.0/xenvsync_1.13.0_linux_arm64.tar.gz"
+      sha256 "83fc999bd1421ba4b1295b0b747ce5845d6470874ea82b3decefdf6ddf148709"
       define_method(:install) do
         bin.install "xenvsync"
       end
